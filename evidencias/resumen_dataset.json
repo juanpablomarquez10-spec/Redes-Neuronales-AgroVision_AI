@@ -1,0 +1,21 @@
+{
+    "fecha_generacion": "2026-10-17T21:42:32",
+    "proyecto": "AgroVision AI",
+    "dataset": {
+        "entrenamiento": {
+            "Tomato___Early_blight": 346,
+            "Tomato___healthy": 350,
+            "Tomato___Late_blight": 350
+        },
+        "validacion": {
+            "Tomato___Early_blight": 74,
+            "Tomato___healthy": 75,
+            "Tomato___Late_blight": 75
+        },
+        "prueba": {
+            "Tomato___Early_blight": 75,
+            "Tomato___healthy": 75,
+            "Tomato___Late_blight": 75
+        }
+    }
+}

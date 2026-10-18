@@ -1,0 +1,69 @@
+{
+    "modelo": "mobilenetv2_tomate.keras",
+    "imagenes_evaluadas": 225,
+    "exactitud": 0.8933333333333333,
+    "metricas_por_categoria": {
+        "Tizón temprano": {
+            "precision": 0.863013698630137,
+            "recall": 0.84,
+            "f1-score": 0.8513513513513513,
+            "support": 75.0
+        },
+        "Tizón tardío": {
+            "precision": 0.9154929577464789,
+            "recall": 0.8666666666666667,
+            "f1-score": 0.8904109589041096,
+            "support": 75.0
+        },
+        "Hoja sana": {
+            "precision": 0.9012345679012346,
+            "recall": 0.9733333333333334,
+            "f1-score": 0.9358974358974359,
+            "support": 75.0
+        },
+        "accuracy": 0.8933333333333333,
+        "macro avg": {
+            "precision": 0.8932470747592834,
+            "recall": 0.8933333333333332,
+            "f1-score": 0.8925532487176323,
+            "support": 225.0
+        },
+        "weighted avg": {
+            "precision": 0.8932470747592836,
+            "recall": 0.8933333333333333,
+            "f1-score": 0.8925532487176323,
+            "support": 225.0
+        }
+    },
+    "matriz_confusion": [
+        [
+            63,
+            5,
+            7
+        ],
+        [
+            9,
+            65,
+            1
+        ],
+        [
+            1,
+            1,
+            73
+        ]
+    ],
+    "orden_clases": [
+        "Tomato___Early_blight",
+        "Tomato___Late_blight",
+        "Tomato___healthy"
+    ],
+    "nombres_clases": [
+        "Tizón temprano",
+        "Tizón tardío",
+        "Hoja sana"
+    ],
+    "tamano_imagen": [
+        180,
+        180
+    ]
+}

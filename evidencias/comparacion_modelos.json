@@ -1,0 +1,16 @@
+[
+    {
+        "modelo": "CNN",
+        "imagenes_evaluadas": 225,
+        "predicciones_correctas": 160,
+        "predicciones_incorrectas": 65,
+        "exactitud_porcentaje": 71.11
+    },
+    {
+        "modelo": "MobileNetV2",
+        "imagenes_evaluadas": 225,
+        "predicciones_correctas": 201,
+        "predicciones_incorrectas": 24,
+        "exactitud_porcentaje": 89.33
+    }
+]

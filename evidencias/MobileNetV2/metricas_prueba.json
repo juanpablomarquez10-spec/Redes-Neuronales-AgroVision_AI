@@ -1,0 +1,50 @@
+{
+    "modelo": "MobileNetV2",
+    "tensorflow": "2.21.0",
+    "clases": [
+        "Tomato___Early_blight",
+        "Tomato___Late_blight",
+        "Tomato___healthy"
+    ],
+    "tamano_imagen": [
+        180,
+        180
+    ],
+    "semilla": 42,
+    "epocas_maximas": 15,
+    "exactitud_prueba": 0.9333333373069763,
+    "perdida_prueba": 0.21072112023830414,
+    "informe_clasificacion": {
+        "Tomato___Early_blight": {
+            "precision": 0.8690476190476191,
+            "recall": 0.9733333333333334,
+            "f1-score": 0.9182389937106918,
+            "support": 75.0
+        },
+        "Tomato___Late_blight": {
+            "precision": 0.9696969696969697,
+            "recall": 0.8533333333333334,
+            "f1-score": 0.9078014184397163,
+            "support": 75.0
+        },
+        "Tomato___healthy": {
+            "precision": 0.9733333333333334,
+            "recall": 0.9733333333333334,
+            "f1-score": 0.9733333333333334,
+            "support": 75.0
+        },
+        "accuracy": 0.9333333333333333,
+        "macro avg": {
+            "precision": 0.9373593073593073,
+            "recall": 0.9333333333333332,
+            "f1-score": 0.9331245818279138,
+            "support": 225.0
+        },
+        "weighted avg": {
+            "precision": 0.9373593073593074,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.9331245818279139,
+            "support": 225.0
+        }
+    }
+}
