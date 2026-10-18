@@ -2,7 +2,7 @@ AgroVision IA
 
 Clasificación de enfermedades en hojas de tomate mediante redes neuronales
 
-Proyecto académico individual para la asignatura Redes Neuronales.
+Proyecto académico individual para la asignatura Redes Neuronales, desarrollado en la Fundación Universitaria Católica del Norte.
 
 Estudiante: Juan Pablo Tejada Márquez
 Programa: Ingeniería en Analítica de Datos
@@ -54,6 +54,8 @@ La división se realizó utilizando la semilla aleatoria 42. El conjunto de prue
 
 Las imágenes originales y los conjuntos divididos no se incluyen en este repositorio. Para reproducir el entrenamiento, es necesario preparar los datos, verificar las categorías y confirmar que las rutas coincidan con las esperadas por los scripts.
 
+El archivo evidencias/resumen_dataset.json contiene información resumida sobre el conjunto de datos.
+
 4. Modelos y resultados
 
 Los modelos se evaluaron con las mismas 225 imágenes de prueba.
@@ -96,7 +98,38 @@ Estos resultados corresponden al experimento realizado y no garantizan el mismo 
 
 5. Estructura del repositorio
 
-Los principales archivos publicados son:
+La estructura principal del proyecto es la siguiente:
+
+Redes-Neuronales-AgroVision_AI/
+├── evidencias/
+│   ├── CNN/
+│   ├── MobileNetV2/
+│   ├── comparacion_modelos/
+│   ├── comparacion_modelos.csv
+│   ├── comparacion_modelos.json
+│   ├── informe_evidencias.md
+│   ├── resumen_dataset.json
+│   ├── prueba_interfaz_agrovision.png
+│   └── prueba_interfaz_agrovision2.png
+├── modelos/
+│   ├── cnn_tomate.keras
+│   └── mobilenetv2_tomate.keras
+├── descargar_datos.py
+├── dividir_datos.py
+├── entrenar_mobilenet.py
+├── entrenar_modelo.py
+├── evaluar_cnn.py
+├── generar_comparacion.py
+├── generar_evidencias.py
+├── generar_graficas.py
+├── interfaz_agrovision.py
+├── predecir_imagen.py
+├── requirements.txt
+├── verificar_datos.py
+├── Informe_Final_Redes_Neuronales_AgroVision_AI_Juan_Pablo_Tejada.docx
+└── README.md
+
+Función de los principales archivos
 
 Archivo
 
@@ -104,7 +137,7 @@ Función
 
 descargar_datos.py
 
-Descarga o preparación de los datos.
+Descarga o preparación de los datos, según la configuración del script.
 
 verificar_datos.py
 
@@ -136,7 +169,7 @@ Generación de gráficas de resultados.
 
 generar_evidencias.py
 
-Organización o generación de evidencias.
+Generación u organización de evidencias.
 
 predecir_imagen.py
 
@@ -154,9 +187,7 @@ README.md
 
 Documentación del proyecto.
 
-Las carpetas evidencias/, modelos/ y las carpetas de resultados podrán consultarse en el repositorio cuando sus respectivos archivos hayan sido publicados.
-
-Nota: los archivos de modelos entrenados y las evidencias deben verificarse directamente en GitHub; no se consideran disponibles solo por estar mencionados en esta documentación.
+Las carpetas evidencias/ y modelos/ contienen, respectivamente, los resultados experimentales publicados y los archivos de los modelos entrenados.
 
 6. Tecnologías utilizadas
 
@@ -164,7 +195,9 @@ Python
 
 TensorFlow y Keras
 
-NumPy y pandas
+NumPy
+
+pandas
 
 scikit-learn
 
@@ -188,23 +221,23 @@ Conexión a internet para instalar las dependencias y, si corresponde, preparar 
 
 Espacio disponible para los paquetes, las imágenes y los resultados del entrenamiento.
 
-La ejecución de la interfaz requiere que el modelo entrenado correspondiente esté disponible en la ruta configurada en el código. Si el modelo no está publicado, será necesario entrenarlo o incorporarlo localmente antes de realizar predicciones.
+La ejecución de la interfaz requiere que el modelo entrenado correspondiente esté disponible en la ruta configurada en el código. Los archivos de los modelos están publicados en la carpeta modelos/ del repositorio, pero se debe verificar que las rutas utilizadas por la aplicación coincidan con esas ubicaciones.
 
 8. Instalación y ejecución
 
 8.1. Descargar el proyecto
 
-Abrir el repositorio: Redes-Neuronales-AgroVision_AI.
+Abrir el repositorio de AgroVision IA en GitHub.
 
 Seleccionar Code → Download ZIP.
 
 Extraer el archivo ZIP.
 
-Abrir la carpeta que contiene interfaz_agrovision.py y requirements.txt.
+Abrir PowerShell en la carpeta raíz del proyecto, donde se encuentran interfaz_agrovision.py y requirements.txt.
 
 8.2. Comprobar Python
 
-Abrir PowerShell en la carpeta del proyecto y ejecutar por separado:
+Ejecutar los siguientes comandos por separado:
 
 python --version
 python -m pip --version
@@ -217,18 +250,14 @@ Ejecutar:
 
 Test-Path .\interfaz_agrovision.py
 Test-Path .\requirements.txt
-
-Ambos comandos deben devolver True.
-
-Para verificar un modelo, cuando se haya incorporado al repositorio o a la carpeta local, comprobar también la ruta correspondiente. Por ejemplo:
-
+Test-Path .\modelos\cnn_tomate.keras
 Test-Path .\modelos\mobilenetv2_tomate.keras
 
-Este último comando solo debe devolver True si el archivo del modelo está realmente disponible en esa ubicación.
+Si la estructura está completa, los cuatro comandos deben devolver True.
 
 8.4. Crear y activar un entorno virtual
 
-Crear el entorno:
+Crear el entorno virtual:
 
 python -m venv .venv
 
@@ -244,7 +273,7 @@ Después, ejecutar de nuevo el comando de activación. Este ajuste se limita a l
 
 8.5. Instalar las dependencias
 
-Con el entorno virtual activado, ejecutar:
+Con el entorno virtual activado, ejecutar cada comando por separado:
 
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
@@ -254,7 +283,7 @@ La instalación puede tardar varios minutos. Si aparecen errores, comprobar la v
 
 8.6. Ejecutar la interfaz
 
-Desde la carpeta raíz del proyecto:
+Desde la carpeta raíz del proyecto, ejecutar:
 
 python .\interfaz_agrovision.py
 
@@ -290,7 +319,7 @@ La reproducción del experimento depende de conservar los datos, la configuraci�
 
 11. Evidencias del proyecto
 
-Se recomienda consultar las evidencias que se publiquen en el repositorio, entre ellas:
+En la carpeta evidencias/ se publican archivos para documentar y revisar el desarrollo experimental, entre ellos:
 
 Curvas de entrenamiento y validación.
 
@@ -298,11 +327,15 @@ Matrices de confusión.
 
 Métricas de evaluación de cada modelo.
 
+Historiales de entrenamiento.
+
 Comparación de exactitud y F1 por categoría.
 
 Capturas de la interfaz y pruebas de predicción.
 
-Estas evidencias permiten documentar y revisar el desarrollo experimental del proyecto.
+Resúmenes y archivos de comparación de resultados.
+
+Estas evidencias permiten revisar el desempeño obtenido por cada modelo sobre el conjunto de prueba.
 
 12. Alcance y limitaciones
 
