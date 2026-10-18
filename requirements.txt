@@ -1,0 +1,12 @@
+# Dependencias principales de AgroVision_AI
+
+tensorflow==2.21.0
+keras==3.15.1
+numpy==2.5.4
+pandas==3.0.6
+matplotlib==3.11.2
+Pillow==12.3.0
+scikit-learn==1.9.1
+datasets==5.1.0
+requests==2.34.2
+seaborn==0.13.2
